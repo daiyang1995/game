@@ -1,0 +1,192 @@
+[2022-05-07T22:50:30.552] [ERROR] error - GET
+[2022-05-07T22:50:30.553] [ERROR] error - /single4YF/loginPage
+[2022-05-07T22:50:30.553] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Not Found',
+  error: 
+   { Error: Not Found
+       at C:\Users\owner\WebstormProjects\kangongcuidao\app.js:56:13
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:317:13)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:275:10)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:635:15
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:260:14)
+       at Function.handle (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:47:12) status: 404 } }
+[2022-05-07T22:50:30.650] [ERROR] error - GET
+[2022-05-07T22:50:30.650] [ERROR] error - /babel/browser.min.js
+[2022-05-07T22:50:30.650] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Not Found',
+  error: 
+   { Error: Not Found
+       at C:\Users\owner\WebstormProjects\kangongcuidao\app.js:56:13
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:317:13)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:275:10)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:635:15
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:260:14)
+       at Function.handle (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:47:12) status: 404 } }
+[2022-05-07T22:50:30.660] [ERROR] error - GET
+[2022-05-07T22:50:30.660] [ERROR] error - /javascripts/formatConversion.js
+[2022-05-07T22:50:30.661] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Not Found',
+  error: 
+   { Error: Not Found
+       at C:\Users\owner\WebstormProjects\kangongcuidao\app.js:56:13
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:317:13)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:275:10)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:635:15
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:260:14)
+       at Function.handle (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:47:12) status: 404 } }
+[2022-05-07T22:50:30.731] [ERROR] error - GET
+[2022-05-07T22:50:30.731] [ERROR] error - /javascripts/formatConversion.js
+[2022-05-07T22:50:30.732] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Not Found',
+  error: 
+   { Error: Not Found
+       at C:\Users\owner\WebstormProjects\kangongcuidao\app.js:56:13
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:317:13)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:275:10)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:635:15
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:260:14)
+       at Function.handle (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:47:12) status: 404 } }
+[2022-05-07T22:50:31.236] [ERROR] error - GET
+[2022-05-07T22:50:31.238] [ERROR] error - /favicon.ico
+[2022-05-07T22:50:31.239] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Not Found',
+  error: 
+   { Error: Not Found
+       at C:\Users\owner\WebstormProjects\kangongcuidao\app.js:56:13
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:317:13)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:275:10)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:635:15
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:260:14)
+       at Function.handle (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:47:12) status: 404 } }
+[2022-05-07T22:51:56.317] [ERROR] error - GET
+[2022-05-07T22:51:56.317] [ERROR] error - /babel/browser.min.js
+[2022-05-07T22:51:56.317] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Not Found',
+  error: 
+   { Error: Not Found
+       at C:\Users\owner\WebstormProjects\kangongcuidao\app.js:56:13
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:317:13)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:275:10)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:635:15
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:260:14)
+       at Function.handle (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:47:12) status: 404 } }
+[2022-05-07T22:52:33.993] [ERROR] error - calc ReferenceError: fs is not defined
+    at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:22:18
+    at next (native)
+    at onFulfilled (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\co\index.js:65:19)
+    at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\co\index.js:54:5
+    at co (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\co\index.js:50:10)
+    at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:16:3
+    at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+[2022-05-07T22:52:36.485] [ERROR] error - GET
+[2022-05-07T22:52:36.486] [ERROR] error - /babel/browser.min.js
+[2022-05-07T22:52:36.487] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Not Found',
+  error: 
+   { Error: Not Found
+       at C:\Users\owner\WebstormProjects\kangongcuidao\app.js:56:13
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:317:13)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:275:10)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:635:15
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:260:14)
+       at Function.handle (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:47:12) status: 404 } }
+[2022-05-07T22:52:37.526] [ERROR] error - calc ReferenceError: fs is not defined
+    at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:22:18
+    at next (native)
+    at onFulfilled (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\co\index.js:65:19)
+    at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\co\index.js:54:5
+    at co (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\co\index.js:50:10)
+    at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:16:3
+    at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+[2022-05-07T22:53:34.637] [ERROR] error - GET
+[2022-05-07T22:53:34.638] [ERROR] error - /babel/browser.min.js
+[2022-05-07T22:53:34.638] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Not Found',
+  error: 
+   { Error: Not Found
+       at C:\Users\owner\WebstormProjects\kangongcuidao\app.js:56:13
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:317:13)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:275:10)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:635:15
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:260:14)
+       at Function.handle (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:47:12) status: 404 } }
+[2022-05-07T23:56:50.204] [ERROR] error - GET
+[2022-05-07T23:56:50.205] [ERROR] error - /babel/browser.min.js
+[2022-05-07T23:56:50.205] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Not Found',
+  error: 
+   { Error: Not Found
+       at C:\Users\owner\WebstormProjects\kangongcuidao\app.js:56:13
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:317:13)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:275:10)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:635:15
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:260:14)
+       at Function.handle (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:47:12) status: 404 } }
+[2022-05-07T23:56:51.031] [ERROR] error - GET
+[2022-05-07T23:56:51.032] [ERROR] error - /favicon.ico
+[2022-05-07T23:56:51.032] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Not Found',
+  error: 
+   { Error: Not Found
+       at C:\Users\owner\WebstormProjects\kangongcuidao\app.js:56:13
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:317:13)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:275:10)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:635:15
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:260:14)
+       at Function.handle (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:47:12) status: 404 } }

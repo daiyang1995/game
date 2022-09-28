@@ -1,0 +1,41 @@
+[2022-09-26T13:52:55.996] [ERROR] error - GET
+[2022-09-26T13:52:55.997] [ERROR] error - /favicon.ico
+[2022-09-26T13:52:55.997] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Not Found',
+  error: 
+   { Error: Not Found
+       at C:\Users\owner\WebstormProjects\kangongcuidao\app.js:64:13
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:317:13)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:275:10)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:635:15
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:260:14)
+       at Function.handle (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:47:12) status: 404 } }
+[2022-09-26T14:31:11.881] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\damage.html:14\n    12|             let aakey = JSON.parse(\'<%- JSON.stringify(yAxis) %>\');\r\n    13| \r\n >> 14|             let bossData = JSON.parse(\'<%- JSON.stringify(bossData) %>\');\r\n    15|             let maxBossData = JSON.parse(\'<%- JSON.stringify(maxBossData) %>\');\r\n    16|             let avgBossData = JSON.parse(\'<%- JSON.stringify(avgBossData) %>\');\r\n    17| \r\n\nbossData is not defined',
+  error: 
+   { ReferenceError: C:\Users\owner\WebstormProjects\kangongcuidao\views\damage.html:14
+       12|             let aakey = JSON.parse('<%- JSON.stringify(yAxis) %>');
+       13| 
+    >> 14|             let bossData = JSON.parse('<%- JSON.stringify(bossData) %>');
+       15|             let maxBossData = JSON.parse('<%- JSON.stringify(maxBossData) %>');
+       16|             let avgBossData = JSON.parse('<%- JSON.stringify(avgBossData) %>');
+       17| 
+   
+   bossData is not defined
+       at eval (C:\Users\owner\WebstormProjects\kangongcuidao\views\damage.html:28:32)
+       at damage (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:682:17)
+       at tryHandleCache (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:254:36)
+       at View.exports.renderFile [as engine] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:485:10)
+       at View.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\view.js:135:8)
+       at tryRender (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:640:10)
+       at EventEmitter.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:592:3)
+       at ServerResponse.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\response.js:1008:7)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:818:17
+       at next (native)
+     path: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\damage.html' } }

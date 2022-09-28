@@ -1,0 +1,23 @@
+[2022-05-30T23:05:38.665] [DEBUG] default - Some debug messages
+[2022-05-30T23:05:51.579] [DEBUG] default - Some debug messages
+[2022-05-30T23:10:43.076] [DEBUG] default - Some debug messages
+[2022-05-30T23:10:45.666] [INFO] default - redisKey -> new-kg-prd-accessToken 不存在，重新获取
+[2022-05-30T23:10:45.875] [INFO] default - 获取access_token : {"access_token":"57_fkzZboNZ9mztl_VvAQiUSdJC0I5t3-x1xtd_RARtVFXg3sExTCVyrmYknNwx9gGqd0J1CTHV6hB403a4_OeNGIVkf34DpWOpyrvqEnYo6Z67Bn7N7FC6bm1HW_pA30vSug3Eo207KJ4VRry3SIMbAEAKAE","expires_in":7200}
+[2022-05-30T23:10:46.689] [INFO] default - access_token : 57_fkzZboNZ9mztl_VvAQiUSdJC0I5t3-x1xtd_RARtVFXg3sExTCVyrmYknNwx9gGqd0J1CTHV6hB403a4_OeNGIVkf34DpWOpyrvqEnYo6Z67Bn7N7FC6bm1HW_pA30vSug3Eo207KJ4VRry3SIMbAEAKAE设置时间为7200S
+[2022-05-30T23:10:54.198] [ERROR] error - GET
+[2022-05-30T23:10:54.199] [ERROR] error - /favicon.ico
+[2022-05-30T23:10:54.199] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Not Found',
+  error: 
+   { Error: Not Found
+       at C:\Users\owner\WebstormProjects\kangongcuidao\app.js:53:13
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:317:13)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:275:10)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:635:15
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:260:14)
+       at Function.handle (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:47:12) status: 404 } }

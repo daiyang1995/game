@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>坎公</title>
+    <%- include("commonCss.html") %>
+    <%- include("commonJs.html") %>
+    <script src="<%= localurl %><%= projectUrl %>javascripts/echarts.js"></script>
+    <script>
+        $(document).ready(function () {
+            let bossCategory = JSON.parse('<%- JSON.stringify(bossCategory) %>');
+            let aakey = JSON.parse('<%- JSON.stringify(yAxis) %>');
+
+
+            let damageArray = [];
+            let countArray = [];
+
+            for (let key in bossCategory) {
+                damageArray.push({
+                    name: key,
+                    type: 'bar',
+                    stack: 'total',
+                    label: {
+                        show: true
+                    },
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: bossCategory[key].damage
+                });
+                countArray.push({
+                    name: key,
+                    type: 'bar',
+                    stack: 'total',
+                    label: {
+                        show: true
+                    },
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: bossCategory[key].count
+                })
+            }
+
+
+            var chartDom = document.getElementById('data');
+            var myChart = echarts.init(chartDom);
+            var option;
+            option = {
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        // Use axis to trigger tooltip
+                        type: 'shadow' // 'shadow' as default; can also be 'line' or 'shadow'
+                    },
+                    formatter: function (a) {
+                        console.log(a)
+                        let list = []
+                        let listItem = ''
+                        let total = 0;
+                        for (var i = 0; i < a.length; i++) {
+                            listItem +=
+                                `<tr>
+                                    <td><i style="display: inline-block;width: 0.2rem;height:  0.2rem;background:${a[i].color};margin-right:0.2rem;border-radius: 50%;"></i></td>
+                                    <td>${a[i].seriesName}</td>
+                                    <td>${a[i].value}</td>
+                                </tr>`;
+                            total += parseInt(a[i].value);
+
+                        }
+                        listItem +=
+                            `<tr>
+                                    <td><i style="display: inline-block;width: 0.2rem;height:  0.2rem;background:#000000;margin-right:0.2rem;border-radius: 50%;"></i></td>
+                                    <td>总计</td>
+                                    <td>${total}</td>
+                                </tr>`;
+                        console.log(listItem);
+                        return '<table class="showBox">' + listItem + '</table>'
+                    }
+                },
+                legend: {},
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'value'
+                },
+                yAxis: {
+                    type: 'category',
+                    data: aakey
+                },
+                series: damageArray
+            };
+            myChart.setOption(option);
+
+            var chartDom_count = document.getElementById('count');
+            var myChart_count = echarts.init(chartDom_count);
+            var option_count;
+            option_count = {
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        // Use axis to trigger tooltip
+                        type: 'shadow' // 'shadow' as default; can also be 'line' or 'shadow'
+                    },
+                    formatter: function (a) {
+                        console.log(a)
+                        let list = []
+                        let listItem = ''
+                        let total = 0;
+                        for (var i = 0; i < a.length; i++) {
+                            listItem +=
+                                `<tr>
+                                    <td><i style="display: inline-block;width: 0.2rem;height:  0.2rem;background:${a[i].color};margin-right:0.2rem;border-radius: 50%;"></i></td>
+                                    <td>${a[i].seriesName}</td>
+                                    <td>${a[i].value}</td>
+                                </tr>`;
+                            total += parseInt(a[i].value);
+
+                        }
+                        listItem +=
+                            `<tr>
+                                    <td><i style="display: inline-block;width: 0.2rem;height:  0.2rem;background:#000000;margin-right:0.2rem;border-radius: 50%;"></i></td>
+                                    <td>总计</td>
+                                    <td>${total}</td>
+                                </tr>`;
+                        console.log(listItem);
+                        return '<table class="showBox">' + listItem + '</table>'
+                    }
+                },
+                legend: {},
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'value'
+                },
+                yAxis: {
+                    type: 'category',
+                    data: aakey
+                },
+                series: countArray
+            };
+            myChart_count.setOption(option_count);
+
+
+        });
+    </script>
+    <style>
+        table, div {
+            font-size: 0.2rem;
+        }
+
+        th {
+            border-bottom: 0.02rem solid #000000;
+        }
+
+        td, th{
+            border: 0.02rem solid #000000;
+        }
+    </style>
+
+</head>
+<body>
+<div class="data" id="data" style="height: 15rem">
+</div>
+
+<div class="data" id="count" style="height: 15rem">
+</div>
+
+
+<button class="bck">返回首页</button>
+
+</body>
+</html>

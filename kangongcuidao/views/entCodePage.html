@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>坎公</title>
+    <%- include("commonCss.html") %>
+    <%- include("commonJs.html") %>
+    <script>
+        $(document).ready(function () {
+            $("body").on("vclick", ".search", function (e) {
+                e.stopPropagation();
+                let date=$(".date").val();
+                if(!date){
+                    let now = new Date();
+                    let month = now.getMonth() + 1;
+                    let date = now.getDate();
+                    date = `${now.getFullYear()}-${month < 10 ? '0' + month : month}-${date < 10 ? '0' + date : date}`
+                }
+                window.location.href="<%=localurl%><%=projectUrl%>genData/<%=entCode%>?date="+date;
+            });
+
+            $("body").on("vclick", ".opMem", function (e) {
+                e.stopPropagation();
+                window.location.href="<%=localurl%><%=projectUrl%>opMemWxName/<%=entCode%>";
+            });
+
+            $("body").on("vclick", ".bck", function (e) {
+                e.stopPropagation();
+                window.location.href="<%=localurl%><%=projectUrl%>";
+            });
+            $("body").on("vclick", ".bossData", function (e) {
+                e.stopPropagation();
+                window.location.href="<%=localurl%><%=projectUrl%>bossData/<%=entCode%>";
+            });
+
+            $("body").on("vclick", ".staistic", function (e) {
+                e.stopPropagation();
+                window.location.href="<%=localurl%><%=projectUrl%>statistic/<%=entCode%>";
+            });
+
+            $("body").on("vclick", ".damage", function (e) {
+                e.stopPropagation();
+                window.location.href="<%=localurl%><%=projectUrl%>damage/<%=entCode%>";
+            });
+
+            $("body").on("vclick", ".staisticTable", function (e) {
+                e.stopPropagation();
+                window.location.href="<%=localurl%><%=projectUrl%>statistic/table/<%=entCode%>";
+            });
+
+            (function () {
+                let now = new Date();
+                let month = now.getMonth() + 1;
+                let date = now.getDate();
+                $(".date").val(`${now.getFullYear()}-${month < 10 ? '0' + month : month}-${date < 10 ? '0' + date : date}`);
+            })();
+        });
+    </script>
+    <style>
+        .ui-grid-a{
+            font-size: 0.2rem;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="ui-grid-a">
+    <span class="ui-block-a">日期 </span>
+    <span class="ui-block-b">
+        <input class="date" type="date" value="" placeholder="输入查询日期" data-role="none">
+    </span>
+</div>
+
+<button class="search" >查询出刀结果</button>
+
+<button class="opMem" >维护成员信息</button>
+
+<button class="bossData" >BOSS查询</button>
+
+<button class="staistic" >出刀统计</button>
+
+<button class="damage" >伤害排名查看</button>
+
+<button class="staisticTable" >伤害排名表格查看</button>
+
+<button class="bck" >返回首页</button>
+
+</body>
+</html>

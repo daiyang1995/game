@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>坎公</title>
+    <%- include("commonCss.html") %>
+    <%- include("commonJs.html") %>
+    <script>
+        $(document).ready(function(){
+            $("body").on("vclick",".btn",function(e){
+                e.stopPropagation();
+                const id = $(this).attr("data-id");
+                window.location.href="<%=localurl%><%=projectUrl%>calc/"+id;
+            })
+        });
+    </script>
+
+</head>
+<body>
+
+<button class="btn" data-id="one">笼中鸽子</button>
+<button class="btn" data-id="two">笼中鸽子蛋</button>
+<button class="btn" data-id="three">你为什么没对象</button>
+
+</body>
+</html>

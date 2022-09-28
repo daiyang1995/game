@@ -1,0 +1,18 @@
+[2022-05-12T23:57:42.574] [DEBUG] default - Some debug messages
+[2022-05-12T23:57:51.534] [ERROR] error - GET
+[2022-05-12T23:57:51.534] [ERROR] error - /favicon.ico
+[2022-05-12T23:57:51.535] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Not Found',
+  error: 
+   { Error: Not Found
+       at C:\Users\owner\WebstormProjects\kangongcuidao\app.js:53:13
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:317:13)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:275:10)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:635:15
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:260:14)
+       at Function.handle (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:47:12) status: 404 } }

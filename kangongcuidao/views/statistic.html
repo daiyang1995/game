@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>坎公</title>
+    <%- include("commonCss.html") %>
+    <%- include("commonJs.html") %>
+
+    <script>
+        $(document).ready(function () {
+            let statisticJson = JSON.parse('<%- JSON.stringify(userData) %>');
+            const totalSize = Number("<%= total %>");
+
+            $("body").on("vclick", ".bck", function (e) {
+                e.stopPropagation();
+                window.location.href = "<%= localurl %><%= projectUrl %>";
+            });
+
+            (function () {
+                for (let key in statisticJson) {
+                    let bossSize = Object.keys(statisticJson[key].bossName).length;
+
+                    let i = 0;
+                    for (let bossName in statisticJson[key].bossName) {
+                        if (i++ == 0) {
+                            $("#table tbody").append(`
+                        <tr>
+                            <td rowspan="${bossSize}">${statisticJson[key].userName}</td>
+                            <td rowspan="${bossSize}">${statisticJson[key].wxName}</td>
+                            <td>${bossName}</td>
+                            <td>${statisticJson[key].bossName[bossName].count}</td>
+                            <td>${statisticJson[key].bossName[bossName].damage}</td>
+                            <td rowspan="${bossSize}">${statisticJson[key].total}/缺${totalSize - Number(statisticJson[key].total)}</td>
+                        </tr>
+                `);
+                        } else {
+                            $("#table tbody").append(`
+                        <tr>
+                            <td>${bossName}</td>
+                            <td>${statisticJson[key].bossName[bossName].count}</td>
+                            <td>${statisticJson[key].bossName[bossName].damage}</td>
+                        </tr>
+                `);
+                        }
+                    }
+
+                }
+            })()
+
+        });
+    </script>
+    <style>
+        table, div {
+            font-size: 0.2rem;
+        }
+
+        th {
+            border-bottom: 0.02rem solid #000000;
+        }
+
+        td {
+            border: 0.02rem solid #000000;
+        }
+    </style>
+
+</head>
+<body>
+<div class="data">
+    <div> 总计 <%= total %> 刀</div>
+    <table id="table">
+        <thead>
+        <tr>
+            <th>游戏名</th>
+            <th>微信名</th>
+            <th>BOSS</th>
+            <th>刀数</th>
+            <th>伤害</th>
+            <th>缺刀</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+
+<button class="bck">返回首页</button>
+
+
+</body>
+</html>

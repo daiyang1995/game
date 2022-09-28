@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>坎公</title>
+    <%- include("commonCss.html") %>
+    <%- include("commonJs.html") %>
+    <script>
+        $(document).ready(function () {
+            $("body").on("vclick", ".bck", function (e) {
+                e.stopPropagation();
+                window.location.href = "<%= localurl %><%= projectUrl %>";
+            });
+        })
+
+    </script>
+    <style>
+        div, span {
+            font-size: 0.2rem;
+        }
+    </style>
+
+</head>
+<body>
+
+<div> 当前轮次： <%= round %></div>
+
+<% array.forEach(function(obj,idx){ %>
+<div class="ui-grid-a">
+    <span class="ui-block-a"><%= obj.name %>(LV.<%= obj.level %>)</span>
+    <span class="ui-block-b"><%= obj.remain_hp %> / <%= obj.total_hp %></span>
+</div>
+<% }) %>
+
+<button class="bck">返回首页</button>
+</body>
+</html>

@@ -1,0 +1,28 @@
+[2022-09-24T19:34:10.913] [DEBUG] default - Some debug messages
+[2022-09-24T19:34:12.074] [INFO] default - redisKey -> new-kg-prd-accessToken 不存在，重新获取
+[2022-09-24T19:34:12.476] [INFO] default - 获取access_token : {"access_token":"61_Gg0aLOtiq5ecd3O6nVfWU7a-HhbeKhVXMnUO7VBs9OzialaW9AKuStSgK84k6Qjs7qXDHnFS3m8oYfAITVLjD2v40syziLaz0uxGuxJ0Wh8pUakdFL1pIwWndrCg0BYS9SvmY316y_MyTzCnMKDaABAAYR","expires_in":7200}
+[2022-09-24T19:34:12.849] [INFO] default - access_token : 61_Gg0aLOtiq5ecd3O6nVfWU7a-HhbeKhVXMnUO7VBs9OzialaW9AKuStSgK84k6Qjs7qXDHnFS3m8oYfAITVLjD2v40syziLaz0uxGuxJ0Wh8pUakdFL1pIwWndrCg0BYS9SvmY316y_MyTzCnMKDaABAAYR设置时间为7200S
+[2022-09-24T19:34:14.951] [ERROR] error - GET
+[2022-09-24T19:34:14.951] [ERROR] error - /favicon.ico
+[2022-09-24T19:34:14.951] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Not Found',
+  error: 
+   { Error: Not Found
+       at C:\Users\owner\WebstormProjects\kangongcuidao\app.js:64:13
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:317:13)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:275:10)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:635:15
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:260:14)
+       at Function.handle (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:47:12) status: 404 } }
+[2022-09-24T19:44:31.441] [DEBUG] default - Some debug messages
+[2022-09-24T19:45:29.674] [DEBUG] default - Some debug messages
+[2022-09-24T19:47:15.973] [DEBUG] default - Some debug messages
+[2022-09-24T19:51:29.289] [DEBUG] default - Some debug messages
+[2022-09-24T19:59:29.323] [DEBUG] default - Some debug messages
+[2022-09-24T20:00:06.382] [DEBUG] default - Some debug messages
+[2022-09-24T20:00:36.033] [DEBUG] default - Some debug messages

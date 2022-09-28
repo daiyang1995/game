@@ -1,0 +1,112 @@
+[2022-05-08T00:12:24.357] [DEBUG] default - Some debug messages
+[2022-05-08T00:12:29.996] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Can\'t set headers after they are sent.',
+  error: 
+   Error: Can't set headers after they are sent.
+       at ServerResponse.OutgoingMessage.setHeader (_http_outgoing.js:356:11)
+       at ServerResponse.header (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\response.js:767:10)
+       at ServerResponse.send (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\response.js:170:12)
+       at done (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\response.js:1004:10)
+       at tryHandleCache (D:\nodejs\node_modules\ejs\lib\ejs.js:228:10)
+       at View.exports.renderFile [as engine] (D:\nodejs\node_modules\ejs\lib\ejs.js:437:10)
+       at View.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\view.js:135:8)
+       at tryRender (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:640:10)
+       at EventEmitter.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:592:3)
+       at ServerResponse.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\response.js:1008:7) }
+[2022-05-08T00:14:36.294] [DEBUG] default - Some debug messages
+[2022-05-08T00:14:54.742] [DEBUG] default - Some debug messages
+[2022-05-08T00:15:25.543] [DEBUG] default - Some debug messages
+[2022-05-08T00:16:26.440] [DEBUG] default - Some debug messages
+[2022-05-08T00:24:38.765] [DEBUG] default - Some debug messages
+[2022-05-08T00:24:47.187] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\opMemWxName.html:23\n    21| <body>\r\n    22| \r\n >> 23| <% mem2Wx.forEach(function(idx,Obj){%>\r\n    24| \r\n    25|     <%=idx%><%=obj%>\r\n    26| <%})%>\r\n\nmem2Wx.forEach is not a function',
+  error: 
+   { TypeError: C:\Users\owner\WebstormProjects\kangongcuidao\views\opMemWxName.html:23
+       21| <body>
+       22| 
+    >> 23| <% mem2Wx.forEach(function(idx,Obj){%>
+       24| 
+       25|     <%=idx%><%=obj%>
+       26| <%})%>
+   
+   mem2Wx.forEach is not a function
+       at eval (eval at compile (D:\nodejs\node_modules\ejs\lib\ejs.js:549:12), <anonymous>:17:15)
+       at returnedFn (D:\nodejs\node_modules\ejs\lib\ejs.js:580:17)
+       at tryHandleCache (D:\nodejs\node_modules\ejs\lib\ejs.js:223:34)
+       at View.exports.renderFile [as engine] (D:\nodejs\node_modules\ejs\lib\ejs.js:437:10)
+       at View.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\view.js:135:8)
+       at tryRender (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:640:10)
+       at EventEmitter.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:592:3)
+       at ServerResponse.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\response.js:1008:7)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:175:13
+       at next (native)
+     path: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\opMemWxName.html' } }
+[2022-05-08T00:24:57.464] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\opMemWxName.html:23\n    21| <body>\r\n    22| \r\n >> 23| <% mem2Wx.each(function(idx,Obj){%>\r\n    24| \r\n    25|     <%=idx%><%=obj%>\r\n    26| <%})%>\r\n\nmem2Wx.each is not a function',
+  error: 
+   { TypeError: C:\Users\owner\WebstormProjects\kangongcuidao\views\opMemWxName.html:23
+       21| <body>
+       22| 
+    >> 23| <% mem2Wx.each(function(idx,Obj){%>
+       24| 
+       25|     <%=idx%><%=obj%>
+       26| <%})%>
+   
+   mem2Wx.each is not a function
+       at eval (eval at compile (D:\nodejs\node_modules\ejs\lib\ejs.js:549:12), <anonymous>:17:15)
+       at returnedFn (D:\nodejs\node_modules\ejs\lib\ejs.js:580:17)
+       at tryHandleCache (D:\nodejs\node_modules\ejs\lib\ejs.js:223:34)
+       at View.exports.renderFile [as engine] (D:\nodejs\node_modules\ejs\lib\ejs.js:437:10)
+       at View.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\view.js:135:8)
+       at tryRender (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:640:10)
+       at EventEmitter.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:592:3)
+       at ServerResponse.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\response.js:1008:7)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:175:13
+       at next (native)
+     path: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\opMemWxName.html' } }
+[2022-05-08T00:24:58.636] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\opMemWxName.html:23\n    21| <body>\r\n    22| \r\n >> 23| <% mem2Wx.each(function(idx,Obj){%>\r\n    24| \r\n    25|     <%=idx%><%=obj%>\r\n    26| <%})%>\r\n\nmem2Wx.each is not a function',
+  error: 
+   { TypeError: C:\Users\owner\WebstormProjects\kangongcuidao\views\opMemWxName.html:23
+       21| <body>
+       22| 
+    >> 23| <% mem2Wx.each(function(idx,Obj){%>
+       24| 
+       25|     <%=idx%><%=obj%>
+       26| <%})%>
+   
+   mem2Wx.each is not a function
+       at eval (eval at compile (D:\nodejs\node_modules\ejs\lib\ejs.js:549:12), <anonymous>:17:15)
+       at returnedFn (D:\nodejs\node_modules\ejs\lib\ejs.js:580:17)
+       at tryHandleCache (D:\nodejs\node_modules\ejs\lib\ejs.js:223:34)
+       at View.exports.renderFile [as engine] (D:\nodejs\node_modules\ejs\lib\ejs.js:437:10)
+       at View.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\view.js:135:8)
+       at tryRender (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:640:10)
+       at EventEmitter.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:592:3)
+       at ServerResponse.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\response.js:1008:7)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:175:13
+       at next (native)
+     path: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\opMemWxName.html' } }
+[2022-05-08T00:27:20.136] [DEBUG] default - Some debug messages
+[2022-05-08T00:42:27.991] [DEBUG] default - Some debug messages
+[2022-05-08T00:42:36.321] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Unexpected token u in JSON at position 0',
+  error: 
+   SyntaxError: Unexpected token u in JSON at position 0
+       at Object.parse (native)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:198:46
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\route.js:137:13)
+       at Route.dispatch (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\route.js:112:3)
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:281:22
+       at param (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:354:14)
+       at param (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:365:14)
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:410:3) }
+[2022-05-08T00:44:31.159] [DEBUG] default - Some debug messages
+[2022-05-08T00:44:57.677] [DEBUG] default - Some debug messages

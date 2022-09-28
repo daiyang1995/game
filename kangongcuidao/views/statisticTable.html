@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>坎公</title>
+    <%- include("commonCss.html") %>
+    <%- include("commonJs.html") %>
+    <script>
+        $(document).ready(function () {
+
+            let bossData = JSON.parse('<%- JSON.stringify(bossData) %>');
+            let maxBossData = JSON.parse('<%- JSON.stringify(maxBossData) %>');
+            let avgBossData = JSON.parse('<%- JSON.stringify(avgBossData) %>');
+            let killBossData = JSON.parse('<%- JSON.stringify(killBossData) %>');
+
+            $("#killBossDataTable").append(`<thead><tr><th>角色</th><th>击杀</th></tr></thead><tbody></tbody>`);
+
+            for (let i in killBossData) {
+                $("#killBossDataTable tbody").append(`<tr><td>${killBossData[i].userName}</td><td>${killBossData[i].kill}</td></tr>`)
+            }
+
+            $(".changeBossMaxData").on("click", function (e) {
+                e.stopPropagation();
+                let id = $(this).attr("data-id");
+                $("#maxBossDataTable").empty();
+                $("#maxBossDataTable").append(`<thead><tr><th colspan=2>${id}</th></tr></thead><tbody>
+                        <tr>
+                         <td>角色</td><td>最大伤害</td>
+                        </tr>
+                    </tbody>`);
+                let size = maxBossData[id].length;
+                if (size == 0) {
+                    $("#maxBossDataTable tbody").append(`<tr><th colspan=2>暂无数据</th></td>`);
+                } else {
+                    for (let i = 0; i < size; i++) {
+                        let maxStr = "";
+                        let bossDataMax = maxBossData[id][i];
+                        console.log(bossDataMax)
+                        if (bossDataMax) {
+                            maxStr = `<td>${bossDataMax}</td><td>${bossData[id][bossDataMax].max}</td>`;
+                        } else {
+                            maxStr = `<td>--</td><td>--</td>`
+                        }
+                        $("#maxBossDataTable tbody").append(`<tr>${maxStr}</tr>`);
+                    }
+                }
+            });
+
+            $(".changeBossAvgData").on("click", function (e) {
+                e.stopPropagation();
+                let id = $(this).attr("data-id");
+                $("#avgBossDataTable").empty();
+                $("#avgBossDataTable").append(`<thead><tr><th colspan=4>${id}</th></tr></thead><tbody>
+                        <tr>
+                            <td>角色</td><td>总伤害</td><td>平据伤害</td><td>总刀</td>
+                        </tr>
+                    </tbody>`);
+                let size = maxBossData[id].length;
+                if (size == 0) {
+                    $("#avgBossDataTable tbody").append(`<tr><th colspan=4>暂无数据</th></td>`);
+                } else {
+                    for (let i = 0; i < size; i++) {
+                        let avgStr = "";
+                        let bossDataAvg = avgBossData[id][i];
+                        if (bossDataAvg) {
+                            avgStr += `<td>${bossDataAvg}</td><td>${bossData[id][bossDataAvg].damage}</td><td>${bossData[id][bossDataAvg].count != 0 ? Math.ceil(bossData[id][bossDataAvg].damage / bossData[id][bossDataAvg].count) : 0}</td><td>${bossData[id][bossDataAvg].count}</td>`;
+                        } else {
+                            avgStr += `<td>--</td><td>--</td><td>--</td>`
+                        }
+                        $("#avgBossDataTable tbody").append(`<tr>${avgStr}</tr>`);
+                    }
+                }
+            });
+
+            $("body").on("vclick", ".bck", function (e) {
+                e.stopPropagation();
+                window.location.href = "<%= localurl %><%= projectUrl %>";
+            });
+
+            (function () {
+                $(".changeBossMaxData:eq(0)").trigger("click");
+                $(".changeBossAvgData:eq(0)").trigger("click");
+            })();
+        });
+    </script>
+    <style>
+        table {
+            border: 0.02rem solid black;
+            width: 80%;
+            margin: 0 auto;
+            word-break: break-all;
+        }
+
+        table, div {
+            font-size: 0.2rem;
+        }
+
+        th {
+            border-bottom: 0.02rem solid #000000;
+        }
+
+        td, th {
+            border: 0.02rem solid #000000;
+        }
+
+        .bossMaxChoose, .bossAvgChoose {
+            display: flex;
+            font-size: 0.2rem;
+        }
+
+        .bossMaxChoose button, .bossAvgChoose button {
+            font-size: 0.2rem;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="maxBossDataDiv" style="margin-bottom: 0.4rem">
+    <div>单刀伤害排行(仅25轮之后)</div>
+    <div class="btn bossMaxChoose">
+        <% Object.keys(bossData).forEach(function (obj, idx){ %>
+            <button data-id="<%= obj %>" class="changeBossMaxData"><%= obj %></button>
+        <% }) %>
+    </div>
+    <table id="maxBossDataTable" style="">
+
+    </table>
+</div>
+
+<div class="avgBossDataDiv" style="margin-bottom: 0.4rem">
+    <div>平均伤害排行(仅25轮之后)</div>
+    <div class="btn bossAvgChoose">
+        <% Object.keys(bossData).forEach(function (obj, idx){ %>
+            <button data-id="<%= obj %>" class="changeBossAvgData"><%= obj %></button>
+        <% }) %>
+    </div>
+    <table id="avgBossDataTable" style="">
+
+    </table>
+</div>
+
+<div class="killBossDataDiv">
+    <div>击杀排行</div>
+    <table id="killBossDataTable" style="">
+
+    </table>
+</div>
+
+<button class="bck">返回首页</button>
+
+</body>
+</html>

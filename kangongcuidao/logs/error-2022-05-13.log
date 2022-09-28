@@ -1,0 +1,24 @@
+[2022-05-13T00:00:43.659] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\statistic.html:11\n    9|     <script>\r\n    10|         $(document).ready(function () {\r\n >> 11|             let statisticJson = JSON.parse(\'<%- JSON.stringify(statistic) %>\');\r\n    12|             const totalSize = Number("<%=total%>");\r\n    13| \r\n    14|             $("body").on("vclick", ".bck", function (e) {\r\n\nstatistic is not defined',
+  error: 
+   { ReferenceError: C:\Users\owner\WebstormProjects\kangongcuidao\views\statistic.html:11
+       9|     <script>
+       10|         $(document).ready(function () {
+    >> 11|             let statisticJson = JSON.parse('<%- JSON.stringify(statistic) %>');
+       12|             const totalSize = Number("<%=total%>");
+       13| 
+       14|             $("body").on("vclick", ".bck", function (e) {
+   
+   statistic is not defined
+       at eval (eval at compile (D:\nodejs\node_modules\ejs\lib\ejs.js:549:12), <anonymous>:17:32)
+       at returnedFn (D:\nodejs\node_modules\ejs\lib\ejs.js:580:17)
+       at tryHandleCache (D:\nodejs\node_modules\ejs\lib\ejs.js:223:34)
+       at View.exports.renderFile [as engine] (D:\nodejs\node_modules\ejs\lib\ejs.js:437:10)
+       at View.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\view.js:135:8)
+       at tryRender (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:640:10)
+       at EventEmitter.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:592:3)
+       at ServerResponse.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\response.js:1008:7)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:483:17
+       at next (native)
+     path: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\statistic.html' } }

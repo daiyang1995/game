@@ -1,0 +1,89 @@
+[2022-09-28T09:51:05.780] [ERROR] error - GET
+[2022-09-28T09:51:05.781] [ERROR] error - /favicon.ico
+[2022-09-28T09:51:05.781] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Not Found',
+  error: 
+   { Error: Not Found
+       at C:\Users\owner\WebstormProjects\kangongcuidao\app.js:64:13
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:317:13)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:275:10)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:635:15
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:260:14)
+       at Function.handle (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:47:12) status: 404 } }
+[2022-09-28T10:02:31.176] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\statisticTable.html:109\n    107|     <div>单刀伤害排行(仅24轮之后)</div>\r\n    108|     <div class="btn bossMaxChoose">\r\n >> 109|         <%bossData.each((obj,idx)=>{%>\r\n    110|             <button><%=obj%></button>\r\n    111|         <%})%>\r\n    112| \r\n\nbossData.each is not a function',
+  error: 
+   { TypeError: C:\Users\owner\WebstormProjects\kangongcuidao\views\statisticTable.html:109
+       107|     <div>单刀伤害排行(仅24轮之后)</div>
+       108|     <div class="btn bossMaxChoose">
+    >> 109|         <%bossData.each((obj,idx)=>{%>
+       110|             <button><%=obj%></button>
+       111|         <%})%>
+       112| 
+   
+   bossData.each is not a function
+       at eval (C:\Users\owner\WebstormProjects\kangongcuidao\views\statisticTable.html:30:16)
+       at statisticTable (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:682:17)
+       at tryHandleCache (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:254:36)
+       at View.exports.renderFile [as engine] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:485:10)
+       at View.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\view.js:135:8)
+       at tryRender (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:640:10)
+       at EventEmitter.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:592:3)
+       at ServerResponse.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\response.js:1008:7)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:819:17
+       at next (native)
+     path: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\statisticTable.html' } }
+[2022-09-28T10:02:49.027] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\statisticTable.html:109\n    107|     <div>单刀伤害排行(仅24轮之后)</div>\r\n    108|     <div class="btn bossMaxChoose">\r\n >> 109|         <%bossData.forEach((obj,idx)=>{%>\r\n    110|             <button><%=obj%></button>\r\n    111|         <%})%>\r\n    112| \r\n\nbossData.forEach is not a function',
+  error: 
+   { TypeError: C:\Users\owner\WebstormProjects\kangongcuidao\views\statisticTable.html:109
+       107|     <div>单刀伤害排行(仅24轮之后)</div>
+       108|     <div class="btn bossMaxChoose">
+    >> 109|         <%bossData.forEach((obj,idx)=>{%>
+       110|             <button><%=obj%></button>
+       111|         <%})%>
+       112| 
+   
+   bossData.forEach is not a function
+       at eval (C:\Users\owner\WebstormProjects\kangongcuidao\views\statisticTable.html:30:16)
+       at statisticTable (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:682:17)
+       at tryHandleCache (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:254:36)
+       at View.exports.renderFile [as engine] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:485:10)
+       at View.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\view.js:135:8)
+       at tryRender (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:640:10)
+       at EventEmitter.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:592:3)
+       at ServerResponse.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\response.js:1008:7)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:819:17
+       at next (native)
+     path: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\statisticTable.html' } }
+[2022-09-28T10:04:25.737] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\statisticTable.html:109\n    107|     <div>单刀伤害排行(仅24轮之后)</div>\r\n    108|     <div class="btn bossMaxChoose">\r\n >> 109|         <% bossData.forEach(function (obj, idx){%>\r\n    110|             <button><%=obj%></button>\r\n    111|         <%})%>\r\n    112| \r\n\nbossData.forEach is not a function',
+  error: 
+   { TypeError: C:\Users\owner\WebstormProjects\kangongcuidao\views\statisticTable.html:109
+       107|     <div>单刀伤害排行(仅24轮之后)</div>
+       108|     <div class="btn bossMaxChoose">
+    >> 109|         <% bossData.forEach(function (obj, idx){%>
+       110|             <button><%=obj%></button>
+       111|         <%})%>
+       112| 
+   
+   bossData.forEach is not a function
+       at eval (C:\Users\owner\WebstormProjects\kangongcuidao\views\statisticTable.html:30:17)
+       at statisticTable (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:682:17)
+       at tryHandleCache (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:254:36)
+       at View.exports.renderFile [as engine] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:485:10)
+       at View.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\view.js:135:8)
+       at tryRender (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:640:10)
+       at EventEmitter.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:592:3)
+       at ServerResponse.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\response.js:1008:7)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:819:17
+       at next (native)
+     path: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\statisticTable.html' } }

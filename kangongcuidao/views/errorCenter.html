@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>错误页面</title>
+    <%- include("commonCss.html") %>
+    <%- include("commonJs.html") %>
+    <script type="text/babel">
+		$(document).ready(function () {
+			const formatConversion = new FormatConversion();
+			/*页面初始话 判断是否需要头部文件*/
+			/***************start***************/
+			const isWeixinBrowser = formatConversion.isWeixinBrowser();
+			if (isWeixinBrowser) {
+				$(".header").hide();
+				let height = $(".footer").length > 0? $(".footer").outerHeight(true): 0;
+				$(".bodyContent").css({"margin-top": 0, "min-height": `calc(100vh - ${height}px)`});
+			}
+
+            $(".bodyContent").on("vclick", ".goBack", function (e) {
+                window.history.go(-1);
+            });
+
+		});
+    </script>
+    <style>
+        .textAlignCenter{
+            text-align: center;
+        }
+        .marginTop{
+            margin-top: 0.2rem;
+        }
+        .header{
+            z-index: 871230;
+            background: #000000;
+            color: #FFFFFF;
+        }
+        .header .title{
+            color: #FFFFFF;
+        }
+        a{
+            color: #3385ff !important;
+            text-decoration: none !important;
+            font-weight: 500 !important;
+        }
+        .error{
+            height: 3rem;
+            line-height: 3rem;
+        }
+        .error:before{
+            display: block;
+            font-family: fullIconAll;
+            content: "\f071";
+            font-size: 1.6rem;
+            color: #FFC107;
+        }
+
+        .bodyContent > button{
+            width: 25% !important;
+            height: 0.6rem;
+            margin: 2.5rem auto 0 auto;
+            font-size: 0.28rem;
+            font-weight: 400;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <span class="title">错误页面</span>
+</div>
+<div class="bodyContent">
+    <%
+    if(typeof msg === 'undefined' ){
+        var msg ="系统异常，请联系管理员";
+    }
+    %>
+    <div class="error textAlignCenter"></div>
+    <div class="textAlignCenter"><%=msg%></div>
+
+    <% if(typeof ret != 'undefined' && ret == '500' ){ %>
+        <button class="close">关闭</button>
+    <% } else { %>
+        <button class="goBack" >返回</button>
+    <% }%>
+    <!--<div class=" textAlignCenter marginTop">客服热线：<a href="tel:400-401-2003" data-role="none">400-401-2003</a></div>-->
+</div>
+</body>
+</html>

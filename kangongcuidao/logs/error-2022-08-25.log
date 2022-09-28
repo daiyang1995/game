@@ -1,0 +1,195 @@
+[2022-08-25T19:12:20.162] [ERROR] error - GET
+[2022-08-25T19:12:20.163] [ERROR] error - /favicon.ico
+[2022-08-25T19:12:20.164] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Not Found',
+  error: 
+   { Error: Not Found
+       at C:\Users\owner\WebstormProjects\kangongcuidao\app.js:64:13
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:317:13)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:275:10)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:635:15
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:260:14)
+       at Function.handle (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:47:12) status: 404 } }
+[2022-08-25T19:18:17.793] [ERROR] error - GET
+[2022-08-25T19:18:17.794] [ERROR] error - /javascripts/echarts.js.map
+[2022-08-25T19:18:17.794] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Not Found',
+  error: 
+   { Error: Not Found
+       at C:\Users\owner\WebstormProjects\kangongcuidao\app.js:64:13
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:317:13)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:275:10)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:635:15
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:260:14)
+       at Function.handle (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:47:12) status: 404 } }
+[2022-08-25T19:20:39.021] [ERROR] error - GET
+[2022-08-25T19:20:39.022] [ERROR] error - /javascripts/echarts.js.map
+[2022-08-25T19:20:39.022] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'Not Found',
+  error: 
+   { Error: Not Found
+       at C:\Users\owner\WebstormProjects\kangongcuidao\app.js:64:13
+       at Layer.handle [as handle_request] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:317:13)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:275:10)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:635:15
+       at next (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:260:14)
+       at Function.handle (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\router\index.js:47:12) status: 404 } }
+[2022-08-25T19:45:17.980] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\statistic.html:12\n    10|         $(document).ready(function () {\r\n    11|             let statisticJson = JSON.parse(\'<%- JSON.stringify(userData) %>\');\r\n >> 12|             const totalSize = Number("<%= total %>");\r\n    13| \r\n    14|             $("body").on("vclick", ".bck", function (e) {\r\n    15|                 e.stopPropagation();\r\n\ntotal is not defined',
+  error: 
+   { ReferenceError: C:\Users\owner\WebstormProjects\kangongcuidao\views\statistic.html:12
+       10|         $(document).ready(function () {
+       11|             let statisticJson = JSON.parse('<%- JSON.stringify(userData) %>');
+    >> 12|             const totalSize = Number("<%= total %>");
+       13| 
+       14|             $("body").on("vclick", ".bck", function (e) {
+       15|                 e.stopPropagation();
+   
+   total is not defined
+       at eval (C:\Users\owner\WebstormProjects\kangongcuidao\views\statistic.html:21:26)
+       at statistic (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:682:17)
+       at tryHandleCache (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:254:36)
+       at View.exports.renderFile [as engine] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:485:10)
+       at View.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\view.js:135:8)
+       at tryRender (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:640:10)
+       at EventEmitter.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:592:3)
+       at ServerResponse.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\response.js:1008:7)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:676:17
+       at next (native)
+     path: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\statistic.html' } }
+[2022-08-25T19:45:41.047] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\statistic.html:12\n    10|         $(document).ready(function () {\r\n    11|             let statisticJson = JSON.parse(\'<%- JSON.stringify(userData) %>\');\r\n >> 12|             const totalSize = Number("<%= total %>");\r\n    13| \r\n    14|             $("body").on("vclick", ".bck", function (e) {\r\n    15|                 e.stopPropagation();\r\n\ntotal is not defined',
+  error: 
+   { ReferenceError: C:\Users\owner\WebstormProjects\kangongcuidao\views\statistic.html:12
+       10|         $(document).ready(function () {
+       11|             let statisticJson = JSON.parse('<%- JSON.stringify(userData) %>');
+    >> 12|             const totalSize = Number("<%= total %>");
+       13| 
+       14|             $("body").on("vclick", ".bck", function (e) {
+       15|                 e.stopPropagation();
+   
+   total is not defined
+       at eval (C:\Users\owner\WebstormProjects\kangongcuidao\views\statistic.html:21:26)
+       at statistic (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:682:17)
+       at tryHandleCache (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:254:36)
+       at View.exports.renderFile [as engine] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:485:10)
+       at View.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\view.js:135:8)
+       at tryRender (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:640:10)
+       at EventEmitter.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:592:3)
+       at ServerResponse.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\response.js:1008:7)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:676:17
+       at next (native)
+     path: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\statistic.html' } }
+[2022-08-25T20:04:05.081] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\damage.html:12\n    10|         $(document).ready(function () {\r\n    11|             let bossCategory = JSON.parse(\'<%- JSON.stringify(bossCategory) %>\');\r\n >> 12|             let aakey = JSON.parse(\'<%- JSON.stringify(aakey) %>\');\r\n    13| \r\n    14| \r\n    15|             var chartDom = document.getElementById(\'data\');\r\n\naakey is not defined',
+  error: 
+   { ReferenceError: C:\Users\owner\WebstormProjects\kangongcuidao\views\damage.html:12
+       10|         $(document).ready(function () {
+       11|             let bossCategory = JSON.parse('<%- JSON.stringify(bossCategory) %>');
+    >> 12|             let aakey = JSON.parse('<%- JSON.stringify(aakey) %>');
+       13| 
+       14| 
+       15|             var chartDom = document.getElementById('data');
+   
+   aakey is not defined
+       at eval (C:\Users\owner\WebstormProjects\kangongcuidao\views\damage.html:25:32)
+       at damage (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:682:17)
+       at tryHandleCache (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:254:36)
+       at View.exports.renderFile [as engine] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:485:10)
+       at View.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\view.js:135:8)
+       at tryRender (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:640:10)
+       at EventEmitter.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:592:3)
+       at ServerResponse.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\response.js:1008:7)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:705:17
+       at next (native)
+     path: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\damage.html' } }
+[2022-08-25T20:04:33.929] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\damage.html:12\n    10|         $(document).ready(function () {\r\n    11|             let bossCategory = JSON.parse(\'<%- JSON.stringify(bossCategory) %>\');\r\n >> 12|             let aakey = JSON.parse(\'<%- JSON.stringify(aakey) %>\');\r\n    13| \r\n    14|             console.log(aakey);\r\n    15| \r\n\naakey is not defined',
+  error: 
+   { ReferenceError: C:\Users\owner\WebstormProjects\kangongcuidao\views\damage.html:12
+       10|         $(document).ready(function () {
+       11|             let bossCategory = JSON.parse('<%- JSON.stringify(bossCategory) %>');
+    >> 12|             let aakey = JSON.parse('<%- JSON.stringify(aakey) %>');
+       13| 
+       14|             console.log(aakey);
+       15| 
+   
+   aakey is not defined
+       at eval (C:\Users\owner\WebstormProjects\kangongcuidao\views\damage.html:25:32)
+       at damage (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:682:17)
+       at tryHandleCache (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:254:36)
+       at View.exports.renderFile [as engine] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:485:10)
+       at View.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\view.js:135:8)
+       at tryRender (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:640:10)
+       at EventEmitter.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:592:3)
+       at ServerResponse.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\response.js:1008:7)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:705:17
+       at next (native)
+     path: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\damage.html' } }
+[2022-08-25T20:04:35.482] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\damage.html:12\n    10|         $(document).ready(function () {\r\n    11|             let bossCategory = JSON.parse(\'<%- JSON.stringify(bossCategory) %>\');\r\n >> 12|             let aakey = JSON.parse(\'<%- JSON.stringify(aakey) %>\');\r\n    13| \r\n    14|             console.log(aakey);\r\n    15| \r\n\naakey is not defined',
+  error: 
+   { ReferenceError: C:\Users\owner\WebstormProjects\kangongcuidao\views\damage.html:12
+       10|         $(document).ready(function () {
+       11|             let bossCategory = JSON.parse('<%- JSON.stringify(bossCategory) %>');
+    >> 12|             let aakey = JSON.parse('<%- JSON.stringify(aakey) %>');
+       13| 
+       14|             console.log(aakey);
+       15| 
+   
+   aakey is not defined
+       at eval (C:\Users\owner\WebstormProjects\kangongcuidao\views\damage.html:25:32)
+       at damage (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:682:17)
+       at tryHandleCache (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:254:36)
+       at View.exports.renderFile [as engine] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:485:10)
+       at View.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\view.js:135:8)
+       at tryRender (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:640:10)
+       at EventEmitter.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:592:3)
+       at ServerResponse.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\response.js:1008:7)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:705:17
+       at next (native)
+     path: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\damage.html' } }
+[2022-08-25T20:04:36.378] [ERROR] error - { localurl: 'http://localhost:3500',
+  projectUrl: '/',
+  message: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\damage.html:12\n    10|         $(document).ready(function () {\r\n    11|             let bossCategory = JSON.parse(\'<%- JSON.stringify(bossCategory) %>\');\r\n >> 12|             let aakey = JSON.parse(\'<%- JSON.stringify(aakey) %>\');\r\n    13| \r\n    14|             console.log(aakey);\r\n    15| \r\n\naakey is not defined',
+  error: 
+   { ReferenceError: C:\Users\owner\WebstormProjects\kangongcuidao\views\damage.html:12
+       10|         $(document).ready(function () {
+       11|             let bossCategory = JSON.parse('<%- JSON.stringify(bossCategory) %>');
+    >> 12|             let aakey = JSON.parse('<%- JSON.stringify(aakey) %>');
+       13| 
+       14|             console.log(aakey);
+       15| 
+   
+   aakey is not defined
+       at eval (C:\Users\owner\WebstormProjects\kangongcuidao\views\damage.html:25:32)
+       at damage (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:682:17)
+       at tryHandleCache (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:254:36)
+       at View.exports.renderFile [as engine] (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\ejs\lib\ejs.js:485:10)
+       at View.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\view.js:135:8)
+       at tryRender (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:640:10)
+       at EventEmitter.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\application.js:592:3)
+       at ServerResponse.render (C:\Users\owner\WebstormProjects\kangongcuidao\node_modules\express\lib\response.js:1008:7)
+       at C:\Users\owner\WebstormProjects\kangongcuidao\routes\index.js:705:17
+       at next (native)
+     path: 'C:\\Users\\owner\\WebstormProjects\\kangongcuidao\\views\\damage.html' } }
