@@ -48,6 +48,12 @@
                 window.location.href="<%=localurl%><%=projectUrl%>statistic/table/<%=entCode%>";
             });
 
+            $("body").on("vclick", ".genMemberData", function (e) {
+                e.stopPropagation();
+                window.location.href="<%=localurl%><%=projectUrl%>genMemberData/<%=entCode%>";
+            });
+
+
             (function () {
                 let now = new Date();
                 let month = now.getMonth() + 1;
@@ -83,6 +89,8 @@
 <button class="damage" >伤害排名查看</button>
 
 <button class="staisticTable" >伤害排名表格查看</button>
+
+<!--<button class="genMemberData" >单人伤害查看</button>-->
 
 <button class="bck" >返回首页</button>
 

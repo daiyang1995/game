@@ -37,7 +37,11 @@
                         let bossDataMax = maxBossData[id][i];
                         console.log(bossDataMax)
                         if (bossDataMax) {
-                            maxStr = `<td>${bossDataMax}</td><td>${bossData[id][bossDataMax].max}</td>`;
+                            maxStr = `
+                                <td class="showRoleList" data-id='${bossDataMax}' data-boss='${id}'>${bossDataMax}</td>
+                                <td>${bossData[id][bossDataMax].max}</td>`;
+                            
+
                         } else {
                             maxStr = `<td>--</td><td>--</td>`
                         }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>坎公</title>
+    <%- include("commonCss.html") %>
+    <%- include("commonJs.html") %>
+
+    <script>
+        $(document).ready(function () {
+
+            $("body").on("vclick", ".bck", function (e) {
+                e.stopPropagation();
+                window.location.href="<%=localurl%><%=projectUrl%>";
+            });
+
+            $("body").on("vclick", ".search", function (e) {
+                e.stopPropagation();
+                const id = $(this).attr("data-id");
+                window.location.href="<%=localurl%><%=projectUrl%>genMemberData/<%=entCode%>/"+id;
+            });
+
+        });
+    </script>
+    <style>
+        input{
+            border:  none;
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+        .ui-grid-a{
+            margin: 0.2rem 0 0 0;
+            border-bottom: 0.02rem solid #000000;
+        }
+        div,btn{
+            font-size: 0.2rem;
+        }
+    </style>
+
+</head>
+<body>
+<div class="data">
+    <% memberList.forEach(function (obj, idx){ %>
+        <div class="ui-grid-a">
+            <span class="ui-block-a"><%=obj.name%></span>
+            <span class='ui-block-b search' data-id="<%=obj.id%>">查看</span>
+        </div>
+    <%});%>
+
+
+</div>
+
+
+<button class="bck" >返回首页</button>
+
+
+</body>
+</html>
