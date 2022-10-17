@@ -11,6 +11,8 @@ const wxTool = require('../tool/wxTool');
 const redisTool = require('../tool/redisTool');
 const redisConf = require('../config/redisConf');
 
+const cryptoTool = require('../tool/crypto');
+
 const multipart = require('connect-multiparty');
 const multipartMiddleware = multipart();
 const fileName = `./sup/bejson.json`;
@@ -451,26 +453,34 @@ router.get('/genData/:entCode', function (req, res, next) {
             for (let i in oneStatistics.data) {
                 let user_name = oneStatistics.data[i].user_name;
                 let role_list = oneStatistics.data[i].role_list;
+                let log_time = oneStatistics.data[i].log_time;
                 if (!(user_name in userRoleListData)) {
                     userRoleListData[user_name] = {
                         damType: 0,
-                        roleList: []
+                        roleList: [],
+                        roleData: {}
                     };
                 }
-                //判断 roleList 中存不存在 已出的角色， 存在就是同刀型
+                //判断 roleList 中存不存在 已出的角色， 存在就是同刀型 筛选重复出刀的队伍
                 let damType = 0;
+                let iconList = [];
                 for (let ii in role_list) {
-                    if (userRoleListData[user_name].roleList.indexOf(role_list[ii].icon) > -1) {
+                    if (userRoleListData[user_name].roleList.indexOf(role_list[ii].icon) < 0) {
                         damType++;
                     }
                     userRoleListData[user_name].roleList.push(role_list[ii].icon);
+                    iconList.push(role_list[ii].icon);
                 }
+                iconList.sort((a,b)=>{ return a>b});
+                const afterMd5 = cryptoTool.getMd5(JSON.stringify(iconList));
                 if (damType > 0) {
                     userRoleListData[user_name].damType++;
+                    userRoleListData[user_name].roleData[afterMd5] = [];
                 }
+                userRoleListData[user_name].roleData[afterMd5].push(log_time);
+
             }
         }
-
 
         if (resJson['code'] == 0) {
             let userData = {};
@@ -478,15 +488,18 @@ router.get('/genData/:entCode', function (req, res, next) {
                 //由于出现补偿刀， 计算伤害刀的时候 需要把击杀的刀 做补偿机制
                 let damage_num = 0;
                 let kill_num = 0;
+                let killLog = {};
                 for (let ii in resJson.data[i].damage_list) {
                     let is_kill = resJson.data[i].damage_list[ii].is_kill;
+                    let log_time = resJson.data[i].damage_list[ii].log_time;
                     if (is_kill == 0) {
                         damage_num++;
                     } else {
                         kill_num++;
+                        killLog[log_time] = is_kill;
                     }
                 }
-                userData[resJson.data[i].user_id] = {damage_num: damage_num, kill_num: kill_num};
+                userData[resJson.data[i].user_id] = {damage_num: damage_num, kill_num: kill_num, killLog: killLog};
             }
             let noDataUser = '';
             for (let i in json.member) {
@@ -498,10 +511,27 @@ router.get('/genData/:entCode', function (req, res, next) {
                 } else {
                     let num = userData[id].damage_num;
                     let kill_num = userData[id].kill_num;
+                    let killLog = userData[id].killLog;
+                    let damType = userRoleListData[name].damType;
                     if (kill_num > 1) {
                         let damType = userRoleListData[name].damType;
-                        if (damType != 3) {
-                            noDataUser += `@${wxName ? wxName : name} 缺${3 - damType}刀,击杀${kill_num}刀; `;
+                        let finishDamType = 0; //完成出刀
+                        for (let keyIdx in Object.keys(userRoleListData[name].roleData)) {
+                            let key = Object.keys(userRoleListData[name].roleData)[keyIdx];
+                            if (userRoleListData[name].roleData[key].length == 2) {
+                                finishDamType++;
+                            } else {
+                                //判断这刀是不是击杀刀
+                                let iskill = killLog[userRoleListData[name].roleData[key][0]];
+                                if (iskill == undefined) {
+                                    finishDamType++;
+                                }
+                            }
+                        }
+                        if (finishDamType == 3) {
+                            //已完成三刀刀型
+                        } else {
+                            noDataUser += `@${wxName ? wxName : name} 缺${3 - finishDamType}刀,击杀${kill_num}刀; `;
                         }
                     } else {
                         num = 3 - Number(num);
@@ -695,18 +725,21 @@ router.get('/statistic/:entCode', function (req, res, next) {
                     let userName = oneMemberData.data[ii].user_name;
                     let damage_num = 0;
                     let kill_num = 0;
+                    let killLog = {};
                     for (let iii in oneMemberData.data[ii].damage_list) {
                         let is_kill = oneMemberData.data[ii].damage_list[iii].is_kill;
+                        let log_time = oneMemberData.data[ii].damage_list[iii].log_time;
                         if (is_kill == 0) {
                             damage_num++;
                         } else {
                             kill_num++;
+                            killLog[log_time] = is_kill;
                         }
                     }
                     if (!(userName in userData4Date)) {
                         userData4Date[userName] = {};
                     }
-                    userData4Date[userName][date] = {damage_num: damage_num, kill_num: kill_num};
+                    userData4Date[userName][date] = {damage_num: damage_num, kill_num: kill_num, killLog: killLog};
                 }
             }
         }
@@ -730,31 +763,40 @@ router.get('/statistic/:entCode', function (req, res, next) {
                 let role_list = resJson.data[i].role_list;
                 let log_time = resJson.data[i].log_time;
                 let date = new Date(log_time * 1000);
-                let dateStr = date.getFullYear()+"-"
-                    +(date.getMonth()<9?"0":"")+((date.getMonth()+1))+"-"
-                    +(date.getDate()<10?"0":"")+((date.getDate()));
+                let dateStr = date.getFullYear() + "-"
+                    + (date.getMonth() < 9 ? "0" : "") + ((date.getMonth() + 1)) + "-"
+                    + (date.getDate() < 10 ? "0" : "") + ((date.getDate()));
 
                 if (!(user_name in userRoleListData)) {
                     userRoleListData[user_name] = {};
                 }
-                if (!( dateStr in userRoleListData[user_name])) {
+                if (!(dateStr in userRoleListData[user_name])) {
                     userRoleListData[user_name][dateStr] = {
                         damType: 0,
-                        roleList: []
+                        roleList: [],
+                        roleData: {}
                     };
                 }
 
                 //判断 roleList 中存不存在 已出的角色， 存在就是同刀型
                 let damType = 0;
+                let iconList = [];
                 for (let ii in role_list) {
-                    if (userRoleListData[user_name][dateStr].roleList.indexOf(role_list[ii].icon) > -1) {
+                    if (userRoleListData[user_name][dateStr].roleList.indexOf(role_list[ii].icon) < 0) {
                         damType++;
                     }
                     userRoleListData[user_name][dateStr].roleList.push(role_list[ii].icon);
+                    iconList.push(role_list[ii].icon);
                 }
+                iconList.sort((a,b)=>{ return a>b});
+
+                const afterMd5 = cryptoTool.getMd5(JSON.stringify(iconList));
                 if (damType > 0) {
                     userRoleListData[user_name][dateStr].damType++;
+                    userRoleListData[user_name][dateStr].roleData[afterMd5] = [];
                 }
+                    userRoleListData[user_name][dateStr].roleData[afterMd5].push(log_time);
+
 
                 let userName = resJson.data[i].user_name;
                 let damage = resJson.data[i].damage;
@@ -765,7 +807,7 @@ router.get('/statistic/:entCode', function (req, res, next) {
                         wxName: name2Wx[userName],
                         bossName: {},
                         total: 0,
-                        miss:0
+                        miss: 0
                     };
                 }
                 if (!(bossName in userData[userName].bossName)) {
@@ -787,21 +829,37 @@ router.get('/statistic/:entCode', function (req, res, next) {
                 let miss = 0;
                 for (let i in json.dateArray) {
                     let date = json.dateArray[i];
-
-                    let num = userData4Date[user_name][date].damage_num;
-                    let kill_num = userData4Date[user_name][date].kill_num;
-                    if (kill_num > 1) {
+                    if (date in userData4Date[user_name]) {
+                        let num = userData4Date[user_name][date].damage_num;
+                        let kill_num = userData4Date[user_name][date].kill_num;
+                        let killLog = userData4Date[user_name][date].killLog;
                         let damType = userRoleListData[user_name][date].damType;
-                        if (damType != 3) {
-                            miss += 3 - damType
+                        if (kill_num > 1) {
+                            let finishDamType = 0; //完成出刀
+                            for (let keyIdx in Object.keys(userRoleListData[user_name][date].roleData)) {
+                                let key = Object.keys(userRoleListData[user_name][date].roleData)[keyIdx];
+                                if (userRoleListData[user_name][date].roleData[key].length == 2) {
+                                    finishDamType++;
+                                } else {
+                                    //判断这刀是不是击杀刀
+                                    if (key in userRoleListData[user_name][date].roleData) {
+                                        let iskill = killLog[userRoleListData[user_name][date].roleData[key][0]];
+                                        if (iskill == undefined) {
+                                            finishDamType++;
+                                        }
+                                    }
+                                }
+                            }
+                            miss += 3 - finishDamType;
+                        } else {
+                            num = 3 - Number(num);
+                            if (num != 0) {
+                                miss += num
+                            }
                         }
                     } else {
-                        num = 3 - Number(num);
-                        if (num != 0) {
-                            miss += num
-                        }
+                        miss += 3
                     }
-
                 }
                 userData[user_name].miss = miss;
             }
@@ -812,6 +870,7 @@ router.get('/statistic/:entCode', function (req, res, next) {
             return;
         }
     });
+
 });
 
 router.get("/statistic/table/:entCode", function (req, res, next) {
