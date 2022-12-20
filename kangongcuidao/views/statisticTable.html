@@ -122,7 +122,7 @@
 <body>
 
 <div class="maxBossDataDiv" style="margin-bottom: 0.4rem">
-    <div>单刀伤害排行(仅25轮之后)</div>
+    <div>单刀伤害排行(仅<%=minBossRound%>轮之后)</div>
     <div class="btn bossMaxChoose">
         <% Object.keys(bossData).forEach(function (obj, idx){ %>
             <button data-id="<%= obj %>" class="changeBossMaxData"><%= obj %></button>
@@ -134,7 +134,7 @@
 </div>
 
 <div class="avgBossDataDiv" style="margin-bottom: 0.4rem">
-    <div>平均伤害排行(仅25轮之后)</div>
+    <div>平均伤害排行(仅<%=minBossRound%>轮之后)</div>
     <div class="btn bossAvgChoose">
         <% Object.keys(bossData).forEach(function (obj, idx){ %>
             <button data-id="<%= obj %>" class="changeBossAvgData"><%= obj %></button>

@@ -5,6 +5,8 @@
   "memberDataUrl": "/api/feweb?target=kan-gong-guild-report%2Fa&date=",
   "statisticsUrl": "/api/feweb?target=kan-gong-guild-log%2Fa&date=&user_id=&page=1&size=2000",
   "checkUserInfo": "/api/feweb?target=kan-gong-guild-user-info%2Fa",
+  "maxBossLevel": 86,
+  "minBossRound": 28,
   "heroList": {
     "https://l1-prod-patch-snake.bilibiligame.net/resources/242/bigfunAssets/103/portraits/sheep_girl.png": "火羊",
     "https://l1-prod-patch-snake.bilibiligame.net/resources/242/bigfunAssets/103/portraits/fire_harpy.png": "火腿",

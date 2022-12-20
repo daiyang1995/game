@@ -1023,7 +1023,7 @@ router.get("/statistic/table/:entCode", function (req, res, next) {
                                 bossData[bossName] = {};
                             }
                             if (Number(is_kill) == 0) {
-                                if (Number(round) < 25) {
+                                if (Number(round) < reqUrlJson.minBossRound) {
                                     //不足83级别
                                     continue;
                                 }
@@ -1107,7 +1107,8 @@ router.get("/statistic/table/:entCode", function (req, res, next) {
                 "bossData": bossData,
                 "maxBossData": maxBossData,
                 "avgBossData": avgBossData,
-                "killBossData": killBossData
+                "killBossData": killBossData,
+                "minBossRound": reqUrlJson.minBossRound
             });
 
         } else {
@@ -1234,7 +1235,7 @@ router.get("/damage/:entCode", function (req, res, next) {
                     bossData[bossName] = {};
                 }
 
-                if (bossLevel == 83) {
+                if (bossLevel == reqUrlJson.maxBossLevel) {
                     if (!(userName in bossData[bossName])) {
                         bossData[bossName][userName] = {
                             max: 0,
